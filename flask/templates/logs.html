@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логи предсказаний</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #fff;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #fff;
+        }
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Логи предсказаний</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Age Group</th>
+            <th>Platform</th>
+            <th>Special Device</th>
+            <th>Price</th>
+            <th>Release Year</th>
+            <th>Game Length</th>
+            <th>Min Players</th>
+            <th>Prediction</th>
+        </tr>
+        {% for log in logs %}
+        <tr>
+            {% for item in log %}
+            <td>{{ item }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

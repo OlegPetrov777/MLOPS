@@ -82,6 +82,15 @@
             text-align: center;
             color: #fff;
         }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        a:hover {
+            text-decoration: none;
+            color: lightsteelblue;
+        }
         
         .prediction-container {
             width: 50%;
@@ -96,7 +105,11 @@
     </style>
 </head>
 <body>
-    <h1>Введите данные для предсказания</h1>
+    <div> 
+        <h1>Предсказание рейтинга игры</h1>
+        <h3><a href="https://github.com/OlegPetrov777/MLOPS/tree/master">GitHub / MLOPS</a></h3>
+    </div>
+    
     <form action="/predict" method="post">
         <label for="Age Group Targeted">Целевая аудитория:</label>
         <select name="Age Group Targeted" required>
